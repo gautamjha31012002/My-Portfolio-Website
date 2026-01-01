@@ -5,6 +5,17 @@ export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
   const [imgError, setImgError] = useState(false);
 
+  const handleImgError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const img = e.currentTarget;
+    // Try PNG then JPG before showing initials
+    if (img.src.endsWith('.png')) {
+      img.src = '/images/profile.jpg';
+      return;
+    }
+    // If already .jpg or alternative failed, show initials fallback
+    setImgError(true);
+  };
+
   useEffect(() => {
     setIsVisible(true);
   }, []);
@@ -99,7 +110,7 @@ export default function Hero() {
                     src="/images/profile.png"
                     alt="Gautam Jha"
                     loading="lazy"
-                    onError={() => setImgError(true)}
+                    onError={handleImgError}
                     className="rounded-full w-40 h-40 md:w-56 md:h-56 object-cover border-4 border-gray-800 shadow-lg"
                   />
                 )}
@@ -117,7 +128,7 @@ export default function Hero() {
                     src="/images/profile.png"
                     alt="Gautam Jha"
                     loading="lazy"
-                    onError={() => setImgError(true)}
+                    onError={handleImgError}
                     className="rounded-full w-24 h-24 object-cover border-4 border-gray-800 shadow-lg"
                   />
                 )}
