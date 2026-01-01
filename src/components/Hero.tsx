@@ -35,7 +35,7 @@ export default function Hero() {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           }`}
         >
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+          <div className="flex flex-col md:flex-row items-center md:items-center gap-8">
             <div className="flex-1">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
