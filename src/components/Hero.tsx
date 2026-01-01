@@ -111,7 +111,7 @@ export default function Hero() {
                     alt="Gautam Jha"
                     loading="lazy"
                     onError={handleImgError}
-                    style={{ objectPosition: 'center 30%' }}
+                    style={{ objectPosition: 'center 70%' }}
                     className="rounded-full w-40 h-40 md:w-56 md:h-56 object-cover border-4 border-gray-800 shadow-lg"
                   />
                 )}
@@ -130,7 +130,7 @@ export default function Hero() {
                     alt="Gautam Jha"
                     loading="lazy"
                     onError={handleImgError}
-                    style={{ objectPosition: 'center 30%' }}
+                    style={{ objectPosition: 'center 70%' }}
                     className="rounded-full w-24 h-24 object-cover border-4 border-gray-800 shadow-lg"
                   />
                 )}
